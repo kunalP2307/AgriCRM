@@ -4,262 +4,157 @@
 <title>Agriculture Automation Using CRM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <meta name="keywords" content="Viticulture Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
 <link href="css/sty	le.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 <link href="css/font-awesome.css" rel="stylesheet"> 
-
+<link href="css/myCss.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
-
-* {
-  font-family: Open Sans;
+	.mySlides {display:none;}
+	.badge:after{
+content:attr(value);
+font-size:16px;
+background: red;
+border-radius:50%;
+padding:1px;
+position:relative;
+left:-2px;
+top:-10px;
+opacity:0.9;
 }
 
-section {
-  width: 100%;
-  display: inline-block;
-  background: #333;
-  height: 50vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
+ .content {
+	 display: table-cell;
+	 text-align: center;
+	 vertical-align: middle;
 }
-
-.footer-distributed{
-	background:rgb(235, 233, 143);
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 16px sans-serif;
-	padding: 55px 50px;
+ h1 {
+	 font-family: 'Lato', sans-serif;
+	 font-size: 36px;
+	 font-weight: 300;
+	 color: #fff;
 }
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-	vertical-align: top;
+ .icon-container {
+	 margin-top: 30px;
+	 width: 100%;
+	 height: 60px;
 }
-
-/* Footer left */
-
-.footer-distributed .footer-left{
-	width: 40%;
+ .icon {
+	 cursor: pointer;
+	 position: relative;
+	 display: inline-block;
+	 width: 60px;
+	 height: 60px;
+	 margin-left: 12px;
+	 margin-right: 12px;
+	 border-radius: 30px;
+	 overflow: hidden;
 }
-
-/* The company logo */
-
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Open Sans', cursive;
-	margin: 0;
+ .icon::before, .icon::after {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 transition: all 0.25s ease;
+	 border-radius: 30px;
 }
-
-.footer-distributed h3 span{
-	color:  lightseagreen;
+ .icon i {
+	 position: relative;
+	 color: #fff;
+	 font-size: 30px;
+	 margin-top: 15px;
+	 transition: all 0.25s ease;
 }
-
-/* Footer links */
-
-.footer-distributed .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
-	padding: 0;
+ .icon-fill::before {
+	 transition-duration: 0.5s;
+	 box-shadow: inset 0 0 0 1px #16a085;
 }
-
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-  font-weight:400;
-	text-decoration: none;
-	color:  inherit;
+ .icon-fill:hover::before {
+	 box-shadow: inset 0 0 0 60px #16a085;
 }
-
-.footer-distributed .footer-company-name{
-	color:  #222;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
+ .icon-enter::after {
+	 box-shadow: inset 0 0 0 1px #eb9532;
 }
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
-	width: 35%;
+ .icon-enter::before {
+	 border-radius: 0;
+	 margin-left: -100%;
+	 box-shadow: inset 0 0 0 60px #eb9532;
 }
-
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
+ .icon-enter:hover::before {
+	 margin-left: 0;
 }
-
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
+ .icon-expand::after {
+	 box-shadow: inset 0 0 0 1px #c82647;
 }
-
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-  font-weight:400;
-	vertical-align: middle;
-	margin:0;
+ .icon-expand::before {
+	 background: #c82647;
+	 box-shadow: inset 0 0 0 60px #2d2c3e;
 }
-
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
+ .icon-expand:hover::before {
+	 box-shadow: inset 0 0 0 1px #2d2c3e;
 }
-
-.footer-distributed .footer-center p a{
-	color:  lightseagreen;
-	text-decoration: none;;
+ .icon-collapse::before {
+	 border-radius: 0;
 }
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
+ .icon-collapse:hover::before {
+	 box-shadow: inset 0 30px 0 0 #8cc63f, inset 0 -30px 0 0 #8cc63f;
 }
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
+ .icon-collapse::after {
+	 box-shadow: inset 0 0 0 1px #8cc63f;
 }
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-	width: 20%;
+ .icon-rotate {
+	 box-shadow: inset 0 0 0 1px #7e3661;
 }
-
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
+ .icon-rotate::after, .icon-rotate::before {
+	 border: 0px solid transparent;
 }
-
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
+ .icon-rotate:hover::before {
+	 transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
+	 border-width: 60px;
+	 border-top-color: #7e3661;
 }
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
+ .icon-rotate:hover::after {
+	 transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
+	 border-width: 60px;
+	 border-left-color: #7e3661;
 }
-
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
-	margin-bottom: 5px;
+ .icon-rotate:hover {
+	 transition: background 0.001s ease 0.3s;
+	 background: #7e3661;
 }
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-		text-align: center;
-	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-
+ .icon-rotate i {
+	 z-index: 1;
 }
+ 
 
-
-.sidenav {
-  height: 50%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(255, 255, 255);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: rgb(88, 202, 35);
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: darkseagreen;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 	</style>
 </head>
 	
 <body>
-		<div class="agileits_w3layouts_banner_nav" style="background-color: rgb(228, 255, 194)">
+			<div class="content">
+				<div class="icon icon-fill"><i class="fa fa-home"></i></div>
+				<div class="icon icon-enter"><i class="fa fa-user"></i></div>
+				<div class="icon icon-expand"> <i class="fa fa-bars"></i></div>
+				<div class="icon icon-collapse"><i class="fa fa-sign-in"></i></div>
+				<div class="icon icon-rotate"><i class="fa fa-phone"></i></div>
+			</div>
+			<div class="agileits_w3layouts_banner_nav" style="background-color: rgb(228, 255, 194)">
 			<nav class="navbar navbar-default">
 				<div class="navbar-header navbar-left">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -272,13 +167,14 @@ section {
 					abc -->
 					<div id="mySidenav" class="sidenav">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: red;">&times;</a>
-						<a href="#" style="background-color: black;">About</a>
-						<a href="#">Services</a>
-						<a href="#">Clients</a>
-						<a href="#">Contact</a>
+						<a href="#"><i style='font-size:24px' class='far'>&#xf2bd;</i>&nbsp;&nbsp;Login/Register</a>
+						<a href="#"><i style='font-size:24px' class='fas'>&#xf406;</i>&nbsp;&nbsp;My Account</a>
+						<a href="#"><i style='font-size:24px' class='fas'>&#xf35b;</i>&nbsp;&nbsp;My Orders	</a>
+						<a href="#"><i style="font-size:24px" class="fa">&#xf07a;</i>&nbsp;&nbsp;My Cart</a>
+						<a href="#"><i style="font-size:24px" class="fa">&#xf059;</i>&nbsp;&nbsp;Help Center</a>
 					</div>
 					  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&nbsp;&nbsp;&nbsp;&#9776;&nbsp;&nbsp;</span>
-					  <img src="/images/logo.jpeg" height="40px" width="100px" style="padding-bottom: 10px;">  
+					  <img src="images/logo.jpeg" height="40px" width="100px" style="padding-bottom: 10px;">  
 					  
 					  <script>
 					  function openNav() {
@@ -293,27 +189,60 @@ section {
 					<!-- <h1><a class="navbar-brand" href="index.html"><i>A</i><span>gri</span><i>C</i><span>rm</span></a></h1> -->
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-					<nav class="menu--iris" style="background-color: green;">
+					<nav class="menu--iris">
 						<ul class="nav navbar-nav menu__list">
-							<li class="menu__item menu__item--current"><a href="index.html" class="menu__link smallyt sty" style="color: red;">Home</a></li>
-							<li class="menu__item"><a href=# class="menu__link">Services</a></li>
-
-							<li class="menu__item"><a href=# class="menu__link">Login</a></li>
-							<li class="menu__item"><a href="mail.html" class="menu__link">Mail Us</a></li>
+							<li class="menu__item menu__item--current"><a href="index.html" class="menu__link smallyt sty" style="color: red;"><l class="w3-medium"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+							<li class="menu__item"><a href="login.html" class="menu__link"><i class='fas fa-user-alt' style='font-size:18px'></i>&nbsp;Login / Register</a></li>
+							<li class="menu__item"><a href="cart.html" class="menu__link"><i class="fa badge" style="font-size:25px" value=0>&#xf07a;</i></a></li>
+							<button type="button" class="btn btn-success" style="font-size: medium;font-family: Serif;">&#43;&nbsp;Sell Product</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							
 						</ul>
-						<div class="w3_agileits_search">
-							<form action="#" method="post">
-								<input type="text" name="Search" placeholder="Search..." required="">
-								<input type="submit" value=" ">
-							</form>
+						<div class="search-container" style="padding-top:9px;">
+							<form action="/action_page.php">
+							  <input type="text" placeholder="Search.." name="search">
+								<button type="submit"><i class="fa fa-search"></i></button>
+								</form>
 						</div>
 					</nav>
 				</div>
 			</nav>
 		</div>
-		<div class="banner"></div>
 		
-		<!-- <div class="wthree_banner_info">
+		  <br><br><br><br>
+		  
+		<!-- <div class="banner"></div>
+		 -->
+		 <div class="row mb-2">
+			<div class="col-md-6">
+			  <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+				  <strong class="d-inline-block mb-2 text-primary">World</strong>
+				  <h3 class="mb-0">Featured post</h3>
+				  <div class="mb-1 text-muted">Nov 12</div>
+				  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				  <a href="#" class="stretched-link">Continue reading</a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+				  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+				<div class="col p-4 d-flex flex-column position-static">
+				  <strong class="d-inline-block mb-2 text-success">Design</strong>
+				  <h3 class="mb-0">Post title</h3>
+				  <div class="mb-1 text-muted">Nov 11</div>
+				  <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				  <a href="#" class="stretched-link">Continue reading</a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+				  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+				</div>
+			  </div>
+			</div>
+		  </div>	
+		 <!-- <div class="wthree_banner_info">
 			<br>
 			<h2><span>Agri CRM</span>
 			</h2>
@@ -324,9 +253,9 @@ section {
 <footer class="footer-distributed">
 
 			<div class="footer-left">
-
-				<h3>Company<span>logo</span></h3>
-
+				<img src="images/logo.jpeg"><img>
+				<!-- <h3>Company<span>logo</span></h3> -->
+				
 				<p class="footer-links">
 					<a href="#" class="link-1">Home</a>
 					
@@ -341,24 +270,24 @@ section {
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">Company Name © 2015</p>
+				<p class="footer-company-name">ArgiCRM © 2020</p>
 			</div>
 
 			<div class="footer-center">
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+					<p style="color:rgb(75, 117, 23)"><span>444 Casa Imperia</span>Hinjewadi,Pune</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+1.555.555.5555</p>
+					<p style="color:rgb(75, 117, 23)">+91 7028991096</p>
 				</div>
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@company.com</a></p>
+					<p style="color:rgb(75, 117, 23)">support@company.com</a></p>
 				</div>
 
 			</div>
@@ -366,8 +295,8 @@ section {
 			<div class="footer-right">
 
 				<p class="footer-company-about">
-					<span>About the company</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					<span style="color: black;">About the company</span>
+					The Organisation which connects farmers and customers directly on a digital platform
 				</p>
 
 				<div class="footer-icons">
