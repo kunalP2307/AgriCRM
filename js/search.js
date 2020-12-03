@@ -1,8 +1,8 @@
 //  Product Category Array
 var category = ["cereals","fruits","vegetables","dairy","milk","seeds","nuts","spices","equipments","animal husbandry"]
     // Products of Specific Category
-var cereals = ["wheat"];
-var fruits = [];
+var cereals = ["wheat","rice","jowar","corn","bajra"];
+var fruits = ["orange","banana","guava","pineapple","mango","grapes","custardapple"];
 var vegetables = [];
 var dairy = [];
 var milk = [];
@@ -48,7 +48,6 @@ var prodCategory = "";
             }
         }  
         else if(checkforProduct(item)){
-            alert(prodCategory)
             var link = prodCategory+'#'+item;
             window.location.href = link;
         }
