@@ -32,32 +32,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </style>
 </head>
 
-<body onload="checkforLogedUser()">
-    <script>
-        function checkforLogedUser(){
-            logedUser = localStorage.getItem("logedUser");
-            if(logedUser != ""){
-               document.getElementById("greet").innerHTML = "Welcome<br>"+logedUser;
-            }
-        }
-        function logout(){
-            localStorage.setItem("logedUser","");
-            window.location.href = "loggedOut.html";
-        }
-    </script>
-  
+<body>
+   <script>
+       
+   </script>
     <nav class="navbar" style="justify-content: left; background-color: rgb(220, 247, 187);">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: red;">&times;</a>
-            <a href="login.html" style="color: black;"><i style='font-size:24px; color: green'
+            <a href="#" style="color: black;"><i style='font-size:24px; color: green'
                     class='far'>&#xf2bd;</i>&nbsp;&nbsp;Login/Register</a>
-            <a href="myAccount.html" style="color: black;"><i style='font-size:24px;color: green'
+            <a href="#" style="color: black;"><i style='font-size:24px;color: green'
                     class='fas'>&#xf406;</i>&nbsp;&nbsp;My Account</a>
-            <a href="myOrders" style="color: black;"><i style='font-size:24px;color: green'
+            <a href="#" style="color: black;"><i style='font-size:24px;color: green'
                     class='fas'>&#xf35b;</i>&nbsp;&nbsp;My Orders </a>
-            <a href="cart.html" style="color: black;"><i style="font-size:24px;color: green"
+            <a href="#" style="color: black;"><i style="font-size:24px;color: green"
                     class="fa">&#xf07a;</i>&nbsp;&nbsp;My Cart</a>
-            <a href="contact.html" style="color: black;"><i style="font-size:24px;color: green"
+            <a href="#" style="color: black;"><i style="font-size:24px;color: green"
                     class="fa">&#xf059;</i>&nbsp;&nbsp;Help Center</a>
         </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&nbsp;&nbsp;&nbsp;&#9776;</span>
@@ -71,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         </script>
         &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo.jpeg" alt="logo" height="40px"
-            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="btn-group">
             <div class="dropdown">
                 <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -80,16 +70,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </button>&nbsp;&nbsp;
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <h5>&nbsp;&#9783;&nbsp;Shop by Categories</h5>
-                    <a class="dropdown-item" href="cereals.html" style="color:rgb(141, 117, 9)">Cereals And Grains</a>
-                    <a class="dropdown-item" href="fruits.html" style="color:rgb(141, 117, 9)">Fruits</a>
-                    <a class="dropdown-item" href="vegetables.html" style="color:rgb(141, 117, 9)">Vegetables</a>
-                    <a class="dropdown-item" href="dairy_milk.html" style="color:rgb(141, 117, 9)">Dairy and Milk</a>
-                    <a class="dropdown-item" href="nuts.html" style="color:rgb(141, 117, 9)">Nuts</a>
-                    <a class="dropdown-item" href="seeds.html" style="color:rgb(141, 117, 9)">Seeds</a>
-                    <a class="dropdown-item" href="spices.html" style="color:rgb(141, 117, 9)">Spices</a>
-                    <a class="dropdown-item" href="animal_husbandry.html" style="color:rgb(141, 117, 9)">Animal Husbundry</a>
-                    <a class="dropdown-item" href="agricultral_equipment.html" style="color:rgb(141, 117, 9)">Agricutural Equipments</a>
-                    <a class="dropdown-item" href="other.html" style="color:rgb(141, 117, 9)">Others</a>
+                    <a class="dropdown-item" href="temp.html" style="color:rgb(141, 117, 9)">Cereals And Grains</a>
+                    <a class="dropdown-item" href="ProdCategory/fruits.html" style="color:rgb(141, 117, 9)">Fruits</a>
+                    <a class="dropdown-item" href="ProdCategory/vegetables.html" style="color:rgb(141, 117, 9)">Vegetables</a>
+                    <a class="dropdown-item" href="ProdCategory/dairy_milk.html" style="color:rgb(141, 117, 9)">Dairy and Milk</a>
+                    <a class="dropdown-item" href="ProdCategory/nuts.html" style="color:rgb(141, 117, 9)">Nuts</a>
+                    <a class="dropdown-item" href="ProdCategory/seeds.html" style="color:rgb(141, 117, 9)">Seeds</a>
+                    <a class="dropdown-item" href="ProdCategory/spices.html" style="color:rgb(141, 117, 9)">Spices</a>
+                    <a class="dropdown-item" href="ProdCategory/animal_husbandry.html" style="color:rgb(141, 117, 9)">Animal Husbundry</a>
+                    <a class="dropdown-item" href="ProdCategory/agricultral_equipment.html" style="color:rgb(141, 117, 9)">Agricutural Equipments</a>
+                    <a class="dropdown-item" href="ProdCategory/other.html" style="color:rgb(141, 117, 9)">Others</a>
                     
                 </div>
             </div>
@@ -98,12 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
            <input type="search" placeholder="&#128269;&nbsp;Search" aria-label="Search" id = "search">&nbsp;&nbsp;
            <button class="btn btn-primary btn-med"><i
-                    class="fa fa-search" onclick="searchItem()"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <div>
-                <center>
-                    <label id= "greet" style="font-style: italic;" ></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </center>
-            </div>
+                    class="fa fa-search" onclick="searchItem()"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
                     <button type="button" class="btn btn-warning btn-sm"> <i
                 class="fa fa-home"></i></i>&nbsp;Home</button>&nbsp;&nbsp;
         <button type="button" class="btn btn-warning btn-sm"><i
@@ -112,10 +98,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <button type="button" class="btn btn-warning btn-sm"><i
                 class="fa fa-user-circle"></i>&nbsp;Login/Register</button>&nbsp;&nbsp;
         </a>
-        <button type="button" class="btn btn-success btn-sm">&#10010;&nbsp;Sell Products</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-danger btn-sm" onclick="logout()">&#x23FB;</button>
+        <button type="button" class="btn btn-success btn-sm">&#10010;&nbsp;Sell Products</button>
 
-        </nav>
+    </nav>
 
 <br>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -159,16 +144,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <hr>
-    <br>
-    <center>
-        <h3 style="font-family:Comic Sans MS; color: darkkhaki;">The Organisation which connects farmers and customers<br> directly on a digital platform.</h3>
-    </center>
-    <br>
-    <center>
-    <h4 style="font-family:  Courier New; color: teal;">------Buy fresh products directly from the farmers at reasonable price.------</h4>
-</center>
-<br>
+    <br><br><br><br>
+
+  
     <!-- <div class="banner"></div>
 		 -->
     <!-- <div class="wthree_banner_info">
@@ -224,131 +202,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-                    style="background-color: rgb(243, 219, 141);">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary" style="font-size: 21px;">Vegetables</strong>
-                        <hr>
-                        <button class="asText">&#9679;&nbsp;Leafy Green</button>
-                        <button class="asText">&#9679;&nbsp;Cruciferous</button>
-                        <button class="asText">&#9679;&nbsp;Marrow </button>
-                        <button class="asText">&#9679;&nbsp;Root</button>
-                        <br>
-                        <a href="#">&#9783;&nbsp;View All...</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="bd-placeholder-img" width="200" height="250"
-                            style="padding-top:10px ;padding-right: 10px;"
-                            src="images/veges.jpeg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-                    style="background-color: rgb(243, 219, 141);">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary" style="font-size: 21px;">Dairy Products</strong>
-                        <hr>
-                        <button class="asText">&#9679;&nbsp;Milk </button>
-                        <button class="asText">&#9679;&nbsp;Butter     </button>
-                        <button class="asText">&#9679;&nbsp;Cultured Dairy </button>
-                        <button class="asText">&#9679;&nbsp;Colostrum Milk</button>
-                        <br>
-                        <a href="#">&#9783;&nbsp;View All...</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="bd-placeholder-img" width="200" height="250"
-                            style="padding-top:10px ;padding-right: 10px;"
-                            src="https://source.unsplash.com/random/?fruits" alt="">
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="bd-placeholder-img card-img-top" src="images/background.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
-              <div class="card-body">
-                <p class="card-text">Cereals provide a very substantial proportion of the needs of the world's population for dietary energy, protein, and micronutrients.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-success">View</button>
-                  </div>
-                  <small class="text-muted"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="bd-placeholder-img card-img-top" src="" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
-              <div class="card-body">
-                <p class="card-text">Fruits are sources of many essential nutrients that are underconsumed, including potassium, dietary fiber, vitamin C, and folate (folic acid).
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-success">View</button>
-                  </div>
-                  <small class="text-muted"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">From leafy greens to cruciferous veggies, produce is a little gift from nature to us humans. Filled with  antioxidants, fiber, B-vitamins, and minerals</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-success">View</button>
-                  </div>
-                  <small class="text-muted"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container marketing">
-
-    
-        <!-- START THE FEATURETTES -->
-    
-        <hr class="featurette-divider">
-    
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Are you a farmer?<span class="text-muted"><br>Do you want to sell your products?</span></h2>
-            <p class="lead">Well !!<br>It's the right place to do so</p>
-            <h2 class="featurette-heading" style="color: red;">Why?</h2>
-            <p class="lead">This is the place where you can sell your various products<br>directly to the customers no Businessman in between, <br>hence incresed profit in your icome.</p>
-            <br>
-            <center>
-            <button type="button" class="btn btn-lg btn-outline-success">Sell Now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button type="button" class="btn btn-lg btn-outline-info">Know More</button>
-             
-            </center>     
-          </div>
-          <div class="col-md-5">
-            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="images/sell.webp" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></svg>
-          </div>
-        </div>
-    
-       
-    
-        <hr class="featurette-divider">
-    
-        <!-- /END THE FEATURETTES -->
-    
-      </div>
     <footer class="footer-distributed">
 
         <div class="footer-left">

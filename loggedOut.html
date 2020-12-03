@@ -20,6 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 	.mySlides {display:none;}
@@ -40,7 +41,7 @@ body {
 		background:url("images/background.jpg") no-repeat
 	}
         h1 {
-          color: #88B04B;
+          color: red;
           font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
           font-weight: 900;
           font-size: 40px;
@@ -70,28 +71,22 @@ body {
      
 	</style>
 </head>
-	<script>
-        function initMsg(){
-            var actvt = localStorage.getItem("activity");
-            if(actvt == "contact"){
-                document.getElementById("msg").innerHTML = "Your Response has been Recorded;"
-            }
-            localStorage.removeItem("activity")
-        }
-    </script>
-<body onload="initMsg()">
+<script>
+    function redirect(){
+        setTimeout(function(){
+        window.location.href = "index.html";
+     }, 2500);
+    }
+</script>
+<body onload="redirect()">
 		
         </div>
         <br><br>
         <div class="card">
             <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-              <i class="checkmark" style="color:#9ABC66 ;font-size: 100px;line-height: 200px;margin-left:-15px ;">✓</i>
+              <i class="checkmark" style="color:red;font-size: 100px;line-height: 200px;margin-left:-15px ;">&#x23FB;</i>
             </div>
-              <h1>Success</h1> 
-			  <p id = "msg"></p><br/><p>we'll be in touch shortly!</p><br><br>
-			<a href="index.html">
-			  <button class="btn btn-success">Ok</button>
-		</a>
+              <h1>Loged Out SuccessFully</h1> 
 			</div>
         <br><br><br>
 		

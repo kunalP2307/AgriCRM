@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="images/img_avatar.png"/>
+    <link rel="stylesheet" href="css/log_sign.css">
+    <title>Log In !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<script>
+    var userArr = ["kunal2307","vaishnavi1209"];
+    var passArr = ["kunal@23","vaishnavi@12"]
+    function validateLogin(){
+        var user = document.getElementById("User").value;
+        var pass = document.getElementById("Pass").value;
+        if(userArr.indexOf(user) == passArr.indexOf(pass)){
+            localStorage.setItem("loginStatus",true);
+            localStorage.setItem("logedUser",user);
+            window.location.href = "loginSuccess.html";
+        } 
+        else{
+
+        }
+        
+    }
+</script>
+<body style="background-image: url('images/background.jpg');">
+
+
+    <div id="login" class="modal">
+
+        <div class="modal-content animate">
+            <h1 style="margin: .5cm;" >
+                Log In&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html" style="color: red;">&#10008;</a>
+            </h1>
+            <div class="imgcontainer">
+                <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+
+                <label for="user"><b>Username</b></label>
+                <input type="text" id = "User" placeholder="Enter Username" name="user" required>
+
+                <label for="passaword"><b>Password</b></label>
+                <input type="password" id = "Pass" placeholder="Enter Password" name="password" required>
+
+                <button type="submit" class="btn1" onclick = "validateLogin()">Login</button><br><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <span class="password"><a href="#">Forgot password?</a></span><br><br><br>
+                <div id="signuplink">
+                    <a href="signup.html">Not a Member? Go to Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+</body>
+</html>

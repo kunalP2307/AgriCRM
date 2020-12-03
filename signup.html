@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="avatar.png" />
+<link rel="stylesheet" href="css/log_sign.css">
+<title>Sign Up !</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-image: url('images/background.jpg');">
+
+
+
+    <div id="login" class="modal">
+        <form class="modal-content animate" method="POST" action="">
+            <div class="container">
+                <h1 style="margin: .5cm;">
+                    Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html" style="color: red;">&#10008;</a>
+                </h1>
+                <hr>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Full Name" name="name" required maxlength="20">
+
+                <label for="address"><b>Address</b></label>
+                <input type="text" placeholder="Enter your address" name="address" required maxlength="100">
+
+                <label for="user"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="user" required maxlength="15">
+
+                <label for="email_id"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email_id" required maxlength="30">
+
+                <label for="name"><b>Mobile no.</b></label>
+                <input type="text" placeholder="Enter mobile number id=" mobile" name="mobile" required maxlength="10">
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required maxlength="20">
+
+                <label for="cpassword"><b></Re-enter> Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="cpassword" required maxlength="20">
+
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button class="btn1" type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('login');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -71,15 +71,13 @@ body {
 	</style>
 </head>
 	<script>
-        function initMsg(){
-            var actvt = localStorage.getItem("activity");
-            if(actvt == "contact"){
-                document.getElementById("msg").innerHTML = "Your Response has been Recorded;"
-            }
-            localStorage.removeItem("activity")
+        function redirect(){
+            setTimeout(function(){
+            window.location.href = "index.html";
+         }, 2500);
         }
     </script>
-<body onload="initMsg()">
+<body onload="redirect()">
 		
         </div>
         <br><br>
@@ -87,11 +85,8 @@ body {
             <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
               <i class="checkmark" style="color:#9ABC66 ;font-size: 100px;line-height: 200px;margin-left:-15px ;">✓</i>
             </div>
-              <h1>Success</h1> 
-			  <p id = "msg"></p><br/><p>we'll be in touch shortly!</p><br><br>
-			<a href="index.html">
-			  <button class="btn btn-success">Ok</button>
-		</a>
+              <h1>Logged in<br> Successfully !!</h1> 
+			
 			</div>
         <br><br><br>
 		
