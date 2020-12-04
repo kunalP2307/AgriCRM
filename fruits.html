@@ -35,14 +35,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </style>
 </head>
 
-<body onload="checkforLogedUser()">
+<body onload="displayNewProducts()">
     <script>
-        function checkforLogedUser() {
-            logedUser = localStorage.getItem("logedUser");
-            if (logedUser != "") {
-                document.getElementById("greet").innerHTML = "Welcome<br>" + logedUser;
-            }
-        }
+
+        
+
         function logout() {
             if (localStorage.getItem("logedUser") == "") {
                 alert("You Have Not Logged in To Any Account")
@@ -51,6 +48,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 localStorage.setItem("logedUser", "");
                 window.location.href = "loggedOut.html";
             }
+        }
+
+        function displayNewProducts(){
+            document.getElementById("pName").innerHTML = localStorage.getItem("newProdName");
+            document.getElementById("pCat").innerHTML =  localStorage.getItem("newProdCat");
+            document.getElementById("pPrice").innerHTML = "&#8377;"+localStorage.getItem("newProdPrice")+"/-";
+            document.getElementById("pDes").innerHTML = localStorage.getItem("newProdDes");
+            document.getElementById("pImg").src = "images/ProdImages/fruits/apple.jpeg";
+            document.getElementById("newProd").style.visibility = "visible";
+            
         }
 
     </script>
@@ -476,7 +483,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <!-- end product -->
         </div>
-    </center>
+
+        <!-- new-product -->
+
+        <div class="col-xs-12 col-md-6" id="newProd" style="visibility: hidden;">
+            <!-- First product box start here-->
+            <div class="prod-info-main prod-wrap clearfix">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="product-image">
+                            <img src="" id ="pImg" alt="194x228" class="img-responsive">
+
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="product-deatil">
+                            <h5 class="name" id = 'pName'>
+                                
+                            </h5>
+                            <br>
+                            <h6 style="color: grey;" id = "pCat"></h6>
+                            <p class="price-container">
+                                <span id = "pPrice"></span>
+                            </p>
+                            <span class="tag1"></span>
+                        </div>
+                        <div class="description">
+                            <p id= "pDes"></p>
+                        </div>
+                        <div class="product-info smart-form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="javascript:void(0);" class="btn btn-danger">Add to cart</a>
+                                    <a href="javascript:void(0);" class="btn btn-info">More info</a>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="rating">Rating:
+                                        <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
+                                        <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end product -->
+        </div>
+        
+        </center>
     <hr>
     <div>
         <center>

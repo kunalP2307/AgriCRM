@@ -3,6 +3,7 @@
 
 <head>
     <title>Agriculture Automation Using CRM</title>
+    <link rel="icon" type="image/gif/png" href="images/logo.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -36,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script>
         function checkforLogedUser() {
             logedUser = localStorage.getItem("logedUser");
-            if (logedUser != "") {
+            if (logedUser != "" && logedUser != null) {
                 document.getElementById("greet").innerHTML = "Welcome<br>" + logedUser;
             }
         }
@@ -45,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 alert("You Have Not Logged in To Any Account")
             }
             else {
-                localStorage.setItem("logedUser", "");
+                localStorage.setItem("logedUser", null);
                 window.location.href = "loggedOut.html";
             }
         }
@@ -77,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         </script>
         &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo.jpeg" alt="logo" height="40px"
-            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="btn-group">
             <div class="dropdown">
                 <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"

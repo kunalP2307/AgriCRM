@@ -31,20 +31,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </style>
 </head>
 
-<body>
-
+<body onload="initCart()">
+    <script>
+        function initCart(){
+            var b = localStorage.getItem("cartEmpt");
+                if(b == 1){
+                document.getElementById("cartProd1").style.visibility = "visible";
+                var temp = localStorage.getItem("cartProdName");
+                document.getElementById("pName").innerHTML = localStorage.getItem("cartProdName");
+                document.getElementById("pCat").innerHTML = localStorage.getItem("cartProdCat");
+                document.getElementById("pPrice").innerHTML = "Rs "+localStorage.getItem("cartProdPrice")+"/-";
+                document.getElementById("pDes").innerHTML = localStorage.getItem("cartProdDetails");
+                if(localStorage.getItem("cartProdId")=="101"){
+                    document.getElementById("prodImg").src = "images/ProdImages/cereals/sihore.jpeg";
+                }
+                else{
+                    document.getElementById("prodImg").src = "images/ProdImages/fruits/mango.jpeg";
+                }
+            }
+            else{
+                document.getElementById("ifCartEmpt").style.visibility = "visible";
+            }
+        }
+        function removeFromCart(){
+            document.getElementById("cartProd1").style.visibility = "hidden";
+            localStorage.removeItem("cartEmpt");
+            localStorage.removeItem("cartProdId");
+            localStorage.removeItem("cartProdName");
+            localStorage.removeItem("cartProdPrice");
+            localStorage.removeItem("cartProdDetails");
+            localStorage.removeItem("cartProdCat");
+            localStorage.removeItem("cartProdImg");
+            document.getElementById("ifCartEmpt").style.visibility = "visible";
+        }
+    </script>
     <nav class="navbar" style="justify-content: left; background-color: rgb(220, 247, 187);">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: red;">&times;</a>
-            <a href="#" style="color: black;"><i style='font-size:24px; color: green'
+            <a href="login.html" style="color: black;"><i style='font-size:24px; color: green'
                     class='far'>&#xf2bd;</i>&nbsp;&nbsp;Login/Register</a>
-            <a href="#" style="color: black;"><i style='font-size:24px;color: green'
+            <a href="myAccount.html" style="color: black;"><i style='font-size:24px;color: green'
                     class='fas'>&#xf406;</i>&nbsp;&nbsp;My Account</a>
-            <a href="#" style="color: black;"><i style='font-size:24px;color: green'
+            <a href="myOrders" style="color: black;"><i style='font-size:24px;color: green'
                     class='fas'>&#xf35b;</i>&nbsp;&nbsp;My Orders </a>
-            <a href="#" style="color: black;"><i style="font-size:24px;color: green"
+            <a href="cart.html" style="color: black;"><i style="font-size:24px;color: green"
                     class="fa">&#xf07a;</i>&nbsp;&nbsp;My Cart</a>
-            <a href="#" style="color: black;"><i style="font-size:24px;color: green"
+            <a href="contact.html" style="color: black;"><i style="font-size:24px;color: green"
                     class="fa">&#xf059;</i>&nbsp;&nbsp;Help Center</a>
         </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&nbsp;&nbsp;&nbsp;&#9776;</span>
@@ -58,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         </script>
         &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo.jpeg" alt="logo" height="40px"
-            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="btn-group">
             <div class="dropdown">
                 <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -66,102 +98,116 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     Categories
                 </button>&nbsp;&nbsp;
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Cereals</a>
-                    <a class="dropdown-item" href="#">Fruits</a>
-                    <a class="dropdown-item" href="#">Vegetables</a>
-                    <a class="dropdown-item" href="#">Dairy and Milk</a>
-                    <a class="dropdown-item" href="#">Meat and Poultry</a>
-                    <a class="dropdown-item" href="#">Animal Husbundry</a>
-                    <a class="dropdown-item" href="#">Agricutural Equipments</a>
-                    <a class="dropdown-item" href="#">Fertilizers and Pesticides</a>
+                    <h5>&nbsp;&#9783;&nbsp;Shop by Categories</h5>
+                    <a class="dropdown-item" href="cereals.html" style="color:rgb(141, 117, 9)">Cereals And Grains</a>
+                    <a class="dropdown-item" href="fruits.html" style="color:rgb(141, 117, 9)">Fruits</a>
+                    <a class="dropdown-item" href="vegetables.html" style="color:rgb(141, 117, 9)">Vegetables</a>
+                    <a class="dropdown-item" href="dairy_milk.html" style="color:rgb(141, 117, 9)">Dairy and Milk</a>
+                    <a class="dropdown-item" href="nuts.html" style="color:rgb(141, 117, 9)">Nuts</a>
+                    <a class="dropdown-item" href="seeds.html" style="color:rgb(141, 117, 9)">Seeds</a>
+                    <a class="dropdown-item" href="spices.html" style="color:rgb(141, 117, 9)">Spices</a>
+                    <a class="dropdown-item" href="animal_husbandry.html" style="color:rgb(141, 117, 9)">Animal
+                        Husbundry</a>
+                    <a class="dropdown-item" href="agricultral_equipment.html"
+                        style="color:rgb(141, 117, 9)">Agricutural Equipments</a>
+                    <a class="dropdown-item" href="other.html" style="color:rgb(141, 117, 9)">Others</a>
 
                 </div>
             </div>
 
 
         </div>
-        <form class="form-inline" style="justify-content: right;">
-            <input class="form-control mr-sm-2" type="search" placeholder="&#128269;&nbsp;Search" aria-label="Search">
-            <button class="btn btn-primary btn-med" type="submit"><i
-                    class="fa fa-search"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </form>
-        <button type="button" class="btn btn-warning btn-sm"> <i
-                class="fa fa-home"></i></i>&nbsp;Home</button>&nbsp;&nbsp;
-        <button type="button" class="btn btn-warning btn-sm"><i
-                class="fa fa-shopping-cart"></i>&nbsp;Cart</button>&nbsp;&nbsp;
-        <a href="login.html">
-        <button type="button" class="btn btn-warning btn-sm"><i
-                class="fa fa-user-circle"></i>&nbsp;Login/Register</button>&nbsp;&nbsp;
+        <input type="search" placeholder="&#128269;&nbsp;Search" aria-label="Search" id="search">&nbsp;&nbsp;
+        <button class="btn btn-primary btn-med"><i class="fa fa-search"
+                onclick="searchItem()"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+            <center>
+                <label id="greet" style="font-style: italic;"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </center>
+        </div>
+        <a href="index.html">
+            <button type="button" class="btn btn-warning btn-sm"> <i
+                    class="fa fa-home"></i></i>&nbsp;Home</button>&nbsp;&nbsp;
         </a>
-        <button type="button" class="btn btn-success btn-sm">&#10010;&nbsp;Sell Products</button>
+        <a href="cart.html">
+            <button type="button" class="btn btn-warning btn-sm"><i
+                    class="fa fa-shopping-cart"></i>&nbsp;Cart</button>&nbsp;&nbsp;
+        </a>
+        <a href="login.html">
+            <button type="button" class="btn btn-warning btn-sm"><i
+                    class="fa fa-user-circle"></i>&nbsp;Login/Register</button>&nbsp;&nbsp;
+        </a>
+        <a href="sellProduct.html">
+            <button type="button" class="btn btn-success btn-sm">&#10010;&nbsp;Sell
+                Products</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        <button type="button" class="btn btn-danger btn-sm" onclick="logout()">&#x23FB;</button>
 
     </nav>
-  <footer class="footer-distributed">
-
-        <div class="footer-left">
-            <img src="images/logo.jpeg"><img>
-            <!-- <h3>Company<span>logo</span></h3> -->
-
-            <p class="footer-links">
-                <a href="#" class="link-1">Home</a>
-
-                <a href="#">Blog</a>
-
-                <a href="#">Pricing</a>
-
-                <a href="#">About</a>
-
-                <a href="#">Faq</a>
-
-                <a href="#">Contact</a>
-            </p>
-
-            <p class="footer-company-name">ArgiCRM © 2020</p>
+    
+    <center>
+        <h3><br>
+        Cart
+        </h3>
+        <div id = "ifCartEmpt" style="visibility: hidden;">
+            <h2> Your Cart is Empty</h2>
+            <a href="index.html"><button class="btn btn-info">Shop Now</button></a>
         </div>
+    </center>
+    <center>
+        <div class="col-xs-12 col-md-6" id="cartProd1" style="visibility: hidden;">
+            <!-- First product box start here-->
+            <div class="prod-info-main prod-wrap clearfix">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="product-image">
+                            <img src="" class="img-responsive" id ="prodImg">
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="product-deatil">
+                            <h5 class="name" id = "pName">
+                                
+                            </h5>
+                            <br>
+                            <h6 id = "pCat">
 
-        <div class="footer-center">
+                            </h6>
+                            <p class="price-container">
+                                <span id="pPrice">
+                                    </span>
+                            </p>
+                            <span class="tag1"></span>
+                        </div>
+                        <div class="description">
 
-            <div>
-                <i style='font-size:24px' class='fas'>&#xf3c5;</i>  
-                <p style="color:rgb(75, 117, 23)"><span>444 Casa Imperia</span>Hinjewadi,Pune</p>
+                            <p id = "pDes"></p>
+                        </div>
+                        <div class="product-info smart-form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-danger" onclick="removeFromCart()">Remove From Cart</button>
+                                    <a href="prodMoreInfo.html"><button class="btn btn-info">More info</button></a>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="rating">Rating:
+                                        <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-2"><i class="fa fa-star text-danger"></i></label>
+                                        <label for="stars-rating-1"><i class="fa fa-star text-danger"></i></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div>
-                <i class="fa fa-phone"></i>
-                <p style="color:rgb(75, 117, 23)">+91 7028991096</p>
-            </div>
-
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p style="color:rgb(75, 117, 23)">support@company.com</a></p>
-            </div>
-
+            <!-- end product -->
+            <a href="bill.html"></a>
+            <button class="btn btn-lg btn-warning">Proceed</button>
         </div>
-
-        <div class="footer-right">
-
-            <p class="footer-company-about">
-                <span style="color: black;">About the company</span>
-                The Organisation which connects farmers and customers directly on a digital platform
-            </p>
-            <hr>
-            <p class="footer-company-about">
-                <span style="color: black;">Kepp up with news from us :</span>
-            </p>
-            
-            <div class="footer-icons">
-
-                <a href="#"><img src="images/facebook.png" alt="" height="35px" width="35px"></i></a>
-                <a href="#"><img src="images/twitter.png" alt="" height="35px" width="35px"></i></a>
-                <a href="#"><img src="images/linkdin.png" alt="" height="35px" width="35px"></a>
-                <a href="#"><img src="images/git.png" alt="" height="35px" width="35px"></i></a>
-                
-            </div>
-
-        </div>
-
-    </footer>
-
+    </center>
 </body>
 
 </html>
