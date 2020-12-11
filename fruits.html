@@ -35,29 +35,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </style>
 </head>
 
-<body onload="displayNewProducts()">
+<body onload="initPage()">
     <script>
 
-        
+        function initPage(){
+            checkforLogedUser();
+            displayNewProducts();
+        }
+        function checkforLogedUser() {
+            logedUser = localStorage.getItem("logedUser");
+            if (logedUser!=null && logedUser != "") {
+               document.getElementById("greet").innerHTML = "Welcome<br>" + logedUser;
+            }
+        }
 
         function logout() {
             if (localStorage.getItem("logedUser") == "") {
                 alert("You Have Not Logged in To Any Account")
             }
             else {
-                localStorage.setItem("logedUser", "");
+                localStorage.setItem("loginStatus",false)
+                localStorage.removeItem("logedUser");
                 window.location.href = "loggedOut.html";
             }
         }
 
         function displayNewProducts(){
+            if(localStorage.getItem("newProdAvailable") == 1){
             document.getElementById("pName").innerHTML = localStorage.getItem("newProdName");
             document.getElementById("pCat").innerHTML =  localStorage.getItem("newProdCat");
             document.getElementById("pPrice").innerHTML = "&#8377;"+localStorage.getItem("newProdPrice")+"/-";
             document.getElementById("pDes").innerHTML = localStorage.getItem("newProdDes");
             document.getElementById("pImg").src = "images/ProdImages/fruits/apple.jpeg";
             document.getElementById("newProd").style.visibility = "visible";
-            
+            }
         }
 
     </script>

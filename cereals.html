@@ -47,7 +47,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 alert("You Have Not Logged in To Any Account")
             }
             else {
-                localStorage.setItem("logedUser", "");
+                localStorage.setItem("loginStatus",false)
+                localStorage.removeItem("logedUser");
                 window.location.href = "loggedOut.html";
             }
         }
