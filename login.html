@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="shortcut icon" href="images/img_avatar.png"/>
-    <link rel="stylesheet" href="css/log_sign.css">
+    <link rel="shortcut icon" href="images/img_avatar.jpg" />
+
+
     <title>Log In !</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="log.css" />
+    <script>
+        var userArr = ["kunal2307", "vaishnavi1209"];
+        var passArr = ["kunal@23", "vaishnavi@12"]
+        function validateLogin() {
+            var user = document.getElementById("User").value;
+            var pass = document.getElementById("Pass").value;
+            if (userArr.indexOf(user) == passArr.indexOf(pass)) {
+                localStorage.setItem("loginStatus", true);
+                localStorage.setItem("logedUser", user);
+                window.location.href = "loginSuccess.html";
+            }
+            else {
 
-</head>
-<script>
-    var userArr = ["kunal2307","vaishnavi1209"];
-    var passArr = ["kunal@23","vaishnavi@12"]
-    function validateLogin(){
-        var user = document.getElementById("User").value;
-        var pass = document.getElementById("Pass").value;
-        if(userArr.indexOf(user) == passArr.indexOf(pass)){
-            localStorage.setItem("loginStatus",true);
-            localStorage.setItem("logedUser",user);
-            window.location.href = "loginSuccess.html";
-        } 
-        else{
+            }
 
         }
-        
-    }
-</script>
-<body style="background-image: url('images/background.jpg');">
+    </script>
+
+</head>
+
+<body>
 
 
-    <div id="login" class="modal">
+    <body style="background-image: url('images/background.jpg');">
 
-        <div class="modal-content animate">
-            <h1 style="margin: .5cm;" >
-                Log In&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="index.html" style="color: red;">&#10008;</a>
-            </h1>
-            <div class="imgcontainer">
-                <img src="images/img_avatar.png" alt="Avatar" class="avatar">
-            </div>
+        <div id="login" class="modal">
 
-            <div class="container">
+            <form class="modal-content animate">
 
-                <label for="user"><b>Username</b></label>
-                <input type="text" id = "User" placeholder="Enter Username" name="user" required>
 
-                <label for="passaword"><b>Password</b></label>
-                <input type="password" id = "Pass" placeholder="Enter Password" name="password" required>
-
-                <button type="submit" class="btn1" onclick = "validateLogin()">Login</button><br><br>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-
-                <span class="password"><a href="#">Forgot password?</a></span><br><br><br>
-                <div id="signuplink">
-                    <a href="signup.html">Not a Member? Go to Sign Up</a>
+                <div class="imgcontainer">
+                    <h1 style>
+                        &nbsp; Log In
+                        <a href="index.html">
+                            <span class="close" title="Close Modal">&times;</span>
+                        </a>
+                    </h1>
+                    <div class="img1">
+                        <img src="images/img_avatar.jpg" alt="Avatar" class="avatar">
+                    </div>
                 </div>
-            </div>
+
+                <div class="container">
+
+                    <label for="user"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="user" required>
+
+                    <label for="passaword"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                    <button type="submit">Login</button><br><br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+
+                    <span class="password"><a href="#">Forgot password?</a></span><br><br><br>
+                    <div id="signuplink">
+                        <a href="signup.html">Not a Member? Go to Sign Up</a>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
 
-   
+        <script>
+            // Get the modal
+            var modal = document.getElementById('login');
 
-</body>
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+
 </html>
