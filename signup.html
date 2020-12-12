@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-<link rel="shortcut icon" href="avatar.png" />
-<link rel="stylesheet" href="css/log_sign.css">
-<title>Sign Up !</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <link rel="shortcut icon" href="avatar.png" />
+    <link rel="stylesheet" href="css/log_sign.css">
+    <title>Sign Up !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
 <body style="background-image: url('images/background.jpg');">
 
 
 
     <div id="login" class="modal">
         <form class="modal-content animate" method="POST" action="">
+            <div class="imgcontainer">
+
+                <a href="index.html">
+                    <span class="close" title="Close Modal">&times;</span>
+                </a>
+
+
+            </div>
+            <h1 style="margin: .5cm;">
+                Sign Up
+                <a href="index.html" style="color: red;"><span class="close" title="Close Modal">&times;</span></a>
+            </h1>
             <div class="container">
-                <h1 style="margin: .5cm;">
-                    Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="index.html" style="color: red;">&#10008;</a>
-                </h1>
+
                 <hr>
 
                 <label for="name"><b>Name</b></label>
@@ -27,16 +42,21 @@
                 <input type="text" placeholder="Enter Username" name="user" required maxlength="15">
 
                 <label for="email_id"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email_id" required maxlength="30">
+                <input type="text" placeholder="Enter Email" name="email_id" onblur="validEmail(this.value)" required
+                    maxlength="30">
 
-                <label for="name"><b>Mobile no.</b></label>
-                <input type="text" placeholder="Enter mobile number id=" mobile" name="mobile" required maxlength="10">
+                <label for="no"><b>Mobile no.</b></label>
+                <input type="text" placeholder="Enter mobile number" id="mobile" name="mobile" required maxlength="10"
+                    onblur="fun(this.value)">
+
 
                 <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required maxlength="20">
+                <input type="password" placeholder="Enter Password" name="password" required maxlength="20" required
+                    minlength="5">
 
                 <label for="cpassword"><b></Re-enter> Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="cpassword" required maxlength="20">
+                <input type="password" placeholder="Repeat Password" name="cpassword" required maxlength="20" required
+                    minlength="5" onblur="validPass(password,cpassword)">
 
 
                 <label>
@@ -47,6 +67,7 @@
 
                 <div class="clearfix">
                     <button class="btn1" type="submit" class="signupbtn">Sign Up</button>
+                    <button class="btn1" type="reset" class="signupbtn">Reset</button>
                 </div>
             </div>
         </form>
@@ -59,11 +80,41 @@
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                modal.style.display = " none";
+            }
+        }
+
+
+    </script>
+
+    <script>
+        /*email validation*/
+        function validEmail(emailAdd) {
+            var loc = emailAdd.indexOf('@')
+            if (loc == -1)
+                alert('Invalid email Address')
+        }
+
+        /*password validation*/
+        function validPass(pass1, pass2) {
+            if (pass1 != pass2) {
+                alert('Incorrect password...!!! \nPlease Enter correct password ')
+            }
+        }
+
+        /*input validate mobile number*/
+        function fun(numb) {
+
+            // If x is Not a Number or less than one or greater than 10
+            if (isNaN(numb) || x < 1 || x > 10) {
+                alert("Input not valid");
             }
         }
     </script>
 
 
+
+
 </body>
+
 </html>
